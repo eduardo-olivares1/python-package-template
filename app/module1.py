@@ -8,7 +8,9 @@ logger.setLevel(logging.DEBUG)
 ch = logging.StreamHandler(sys.stdout)
 ch.setLevel(logging.INFO)
 # create formatter
-formatter = logging.Formatter("%(asctime)s - %(filename)s:%(funcName)s - %(levelname)s - %(message)s")
+formatter = logging.Formatter(
+    "%(asctime)s - %(filename)s:%(funcName)s - %(levelname)s - %(message)s"
+)
 # add formatter to chINFO
 ch.setFormatter(formatter)
 # add ch to logger
@@ -16,8 +18,8 @@ logger.addHandler(ch)
 
 
 def func1() -> None:
-    logger.debug('This is a debug message')
-    logger.info('This is an info message')
-    logger.warning('This is a warning message')
-    logger.error('This is an error message')
-    logger.critical('This is a critical message')
+    logger.debug("This is a debug message")
+    logger.info("This is an info message")
+    logger.warning("This is a warning message")
+    logger.error("This is an error message")
+    logger.critical("This is a critical message")
